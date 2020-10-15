@@ -39,12 +39,5 @@ pipeline {
       }
     }
 
-    stage('error') {
-      steps {
-        archiveArtifacts(artifacts: 'target/demoapp.jar', fingerprint: true)
-        catchError()
-      }
-    }
-
   }
 }
